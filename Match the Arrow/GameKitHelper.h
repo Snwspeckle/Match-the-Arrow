@@ -6,8 +6,17 @@
 //  Copyright (c) 2014 Anthony Vella. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@import GameKit;
+
+extern NSString *const ShowGCAuthenticationViewController;
 
 @interface GameKitHelper : NSObject
+
+@property (strong, nonatomic) UIViewController *authenticationViewController;
+
+- (void)authenticateLocalPlayer;
+- (void)reportScore:(int)gameScore;
+
++ (instancetype)sharedGameKitHelper;
 
 @end
